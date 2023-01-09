@@ -1,0 +1,351 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&display=swap");
+
+:root {
+  --color--banana: #73c0d3;
+  --color--oranges: #f6993c;
+  --color--iceCream: #8e6762;
+  --color--text: hsla(0, 0%, 0%, 0.5);
+  --color--text-w: #fff;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  list-style-type: none;
+  font-family: "PT Serif", serif;
+  font-size: 16px;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--color--text-w);
+  color: #000;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-image: url(/assets/images/fruits--2.png);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--color--text-w);
+}
+#header::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.19)
+  );
+}
+header > .row--1 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  padding: 1.5rem;
+  border-bottom: 1px solid hsla(0, 100%, 100%, 0.4);
+  isolation: isolate;
+}
+header > .row--1 .logo {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: bolder;
+  font-size: 16px;
+}
+header > .row--1 nav > ul > li {
+  display: inline-block;
+  margin-left: 1rem;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+header > .row--2 main {
+  isolation: isolate;
+  width: 100%;
+  padding: 16rem 0 16rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header > .row--2 main > h1 {
+  font-size: 60px;
+  letter-spacing: 5px;
+  text-transform: capitalize;
+}
+
+/* 
+Below is the stying for  section features
+*/
+#section--features .features {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.box {
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+}
+.image--container > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+.box.contents {
+  padding: 4rem 8rem 4rem 4rem;
+}
+.box.contents span {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transform: translateX(80px);
+  color: inherit;
+  font-size: 14px;
+}
+.box.contents span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 60px;
+  height: 3px;
+  border-radius: 200px;
+  transform: translateX(-80px);
+  background-color: var(--color--banana);
+}
+.box.contents:nth-child(2) span {
+  color: var(--color--banana);
+}
+.box.contents:nth-child(3) span {
+  color: var(--color--iceCream);
+}
+.box.contents:nth-child(3) span::before {
+  background-color: var(--color--iceCream);
+}
+.box.contents:nth-child(6) span {
+  color: var(--color--oranges);
+}
+.box.contents:nth-child(6) span::before {
+  background-color: var(--color--oranges);
+}
+.box.contents h1 {
+  font-size: 30px;
+  text-transform: capitalize;
+  line-height: 45px;
+  letter-spacing: 2px;
+  font-weight: 900;
+  -webkit-text-stroke: 1px #000;
+  margin-top: 1rem;
+}
+.box.contents p {
+  margin-top: 1rem;
+  font-size: 14px;
+  color: var(--color--text);
+}
+.box.contents > button {
+  border: 3px solid;
+  background-color: transparent;
+  padding: 8px 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 2rem;
+  border-radius: 4px;
+  display: block;
+  cursor: pointer;
+}
+.box.contents .btn--1 {
+  border-color: var(--color--banana);
+}
+.box.contents .btn--2 {
+  border-color: var(--color--iceCream);
+}
+.box.contents .btn--3 {
+  border-color: var(--color--oranges);
+}
+
+/* 
+the below styling is for the listed img box
+*/
+
+.listed--features {
+  width: 100%;
+  display: flex;
+}
+.listed--features .listed--img {
+  overflow: hidden;
+  height: 270px;
+  width: 100%;
+}
+.listed--img > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+/* 
+the below is section 3 syling;
+*/
+#section--3 {
+  width: 100%;
+  padding: 6rem 0;
+}
+.section--3__row1,
+.section--3__row2,
+.section--3__row3 {
+  width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section--3__row1 span {
+  color: var(--color--oranges);
+}
+.section--3__row1 h1 {
+  margin-top: 1rem;
+  font-size: 30px;
+  line-height: 45px;
+  letter-spacing: 2px;
+  font-weight: 900;
+  -webkit-text-stroke: 1px #000;
+  text-transform: capitalize;
+}
+.section--3__row2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+.section--3__row2 > .sec3--rw2__box {
+  height: 250px;
+  overflow: hidden;
+}
+
+.sec3--rw2__box > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.section--3__row3 {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.section--3__row3 .sec3row3--box span {
+  display: block;
+  margin-top: 1rem;
+}
+.sec3row3--box {
+  height: 200px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color--oranges);
+  color: var(--color--text-w);
+}
+.sec3row3--box:nth-child(2) {
+  background-color: var(--color--banana);
+}
+.sec3row3--box:nth-child(3) {
+  background-color: var(--color--iceCream);
+}
+
+.sec3row3--box span:nth-child(1) .icon {
+  font-size: 42px;
+}
+.sec3row3--box span:nth-child(2) {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* FOOTER styling starts here */
+footer {
+  width: 100%;
+  padding: 4rem 0;
+  display: grid;
+  place-content: center;
+  background-image: url(/assets/images/footer.jfif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--color--text-w);
+  text-align: center;
+}
+footer > h1 {
+  font-size: 30px;
+  line-height: 45px;
+  letter-spacing: 2px;
+  font-weight: 900;
+  -webkit-text-stroke: 1px var(--color--text-w);
+  text-transform: capitalize;
+}
+form {
+  margin-top: 2rem;
+  width: 100%;
+  display: block;
+}
+form .name--container,
+footer .email--container {
+  border: 3px solid var(--color--text-w);
+  width: 400px;
+  margin-top: 10px;
+}
+input::placeholder {
+  color: var(--color--text-w);
+}
+.name--container input,
+.email--container input {
+  width: 100%;
+  height: 100%;
+  padding: 0.4rem;
+  border: none;
+  background-color: transparent;
+}
+form .textArea--container {
+  margin-top: 10px;
+  width: 400px;
+}
+.textArea--container textarea {
+  width: 100%;
+  background-color: transparent;
+  border: 3px solid var(--color--text-w);
+}
+form button {
+  border: none;
+  padding: 8px 15px;
+  color: var(--color--iceCream);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 10px;
+  border-radius: 4px;
+  display: block;
+  cursor: pointer;
+  background-color: var(--color--text-w);
+  transform: translateX(10rem);
+}
